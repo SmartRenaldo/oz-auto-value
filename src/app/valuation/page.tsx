@@ -7,6 +7,7 @@ import CarForm from "@/components/valuation/car-form";
 import ResultCard from "@/components/valuation/result-card";
 import type { CarFormData, ValuationResult } from "@/lib/types";
 import { calculateCarPrice } from "@/components/valuation/price-calculator";
+import Link from "next/link";
 
 export default function ValuationPage() {
   const [result, setResult] = useState<ValuationResult | null>(null);
@@ -30,14 +31,23 @@ export default function ValuationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4">
       <div className="container mx-auto max-w-4xl">
-        <div className="mb-6">
-          <a
+        <div className="mb-6 invisible">
+          <Link
             href="/"
             className="inline-flex items-center text-gray-400 hover:text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors"
           >
             <ChevronLeft className="h-4 w-4 mr-2" />
             Back to Home
-          </a>
+          </Link>
+        </div>
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="inline-flex items-center text-gray-400 hover:text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors"
+          >
+            <ChevronLeft className="h-4 w-4 mr-2" />
+            Back to Home
+          </Link>
         </div>
 
         <motion.div
