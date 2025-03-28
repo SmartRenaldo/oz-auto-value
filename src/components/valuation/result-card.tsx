@@ -31,7 +31,7 @@ export default function ResultCard({ result, onReset }: ResultCardProps) {
           Estimated Value
         </motion.h2>
         <motion.div
-          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400"
+          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 0.4 }}

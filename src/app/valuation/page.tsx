@@ -32,23 +32,14 @@ export default function ValuationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4">
       <div className="container mx-auto max-w-4xl">
-        <div className="mb-6 invisible">
-          <Link
+        <div className="mb-6">
+          <a
             href="/"
-            className="flex items-center text-gray-400 hover:text-white p-3 rounded-md hover:bg-gray-800 transition-colors w-full"
+            className="inline-flex items-center text-gray-400 hover:text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors"
           >
             <ChevronLeft className="h-4 w-4 mr-2" />
             Back to Home
-          </Link>
-        </div>
-        <div className="mb-6">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gray-400 hover:text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors group"
-          >
-            <ChevronLeft className="h-4 w-4 mr-2 transition-colors group-hover:text-white" />
-            <span className="transition-colors">Back to Home</span>
-          </Link>
+          </a>
         </div>
 
         <motion.div
@@ -57,7 +48,7 @@ export default function ValuationPage() {
           transition={{ duration: 0.5 }}
           className="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 backdrop-blur-sm"
         >
-          <h1 className="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+          <h1 className="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-tight">
             Used Car Valuation Tool
           </h1>
 

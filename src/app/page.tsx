@@ -4,24 +4,15 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ThreeDBackground from "@/components/3d-background";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative overflow-hidden">
+      <ThreeDBackground />
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-          {/* Background with overlay */}
-          <div
-            className="absolute inset-0 bg-cover bg-center z-0"
-            style={{
-              backgroundImage: "url(/images/hero.jpg)",
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-          </div>
-
           {/* Content */}
           <div className="container relative z-10 px-4 mx-auto text-center">
             <motion.div
@@ -29,8 +20,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                OzAutoValue
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-tight">
+                <span className="font-black">OZ</span>
+                <span className="font-light">AUTO</span>
+                <span className="font-black">VALUE</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium mb-4 text-white">
                 Australian Used Car Valuation Expert
@@ -44,7 +37,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link href="/valuation">
-                  <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-6 rounded-lg text-lg font-medium">
+                  <Button className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white px-8 py-6 rounded-lg text-lg font-medium shadow-lg">
                     Start Valuation
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -57,7 +50,7 @@ export default function Home() {
         {/* Features Section */}
         <section className="py-20 bg-gray-900">
           <div className="container px-4 mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+            <h2 className="text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
               Why Choose Our Valuation Tool
             </h2>
 
@@ -113,7 +106,7 @@ export default function Home() {
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link href="/valuation">
-                <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-6 rounded-lg text-lg font-medium">
+                <Button className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white px-8 py-6 rounded-lg text-lg font-medium shadow-lg">
                   Free Valuation
                 </Button>
               </Link>

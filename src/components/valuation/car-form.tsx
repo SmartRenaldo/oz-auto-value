@@ -288,7 +288,7 @@ export default function CarForm({ onSubmit, isCalculating }: CarFormProps) {
         <Button
           type="submit"
           disabled={isCalculating}
-          className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white py-3 text-lg rounded-lg"
+          className="w-full bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white py-3 text-lg rounded-lg shadow-md"
         >
           {isCalculating ? (
             <>

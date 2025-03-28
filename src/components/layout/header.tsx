@@ -32,12 +32,14 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <motion.span
-              className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400"
+              className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-tight"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              OzAutoValue
+              <span className="font-black">OZ</span>
+              <span className="font-light">AUTO</span>
+              <span className="font-black">VALUE</span>
             </motion.span>
           </Link>
 
@@ -56,7 +58,7 @@ export default function Header() {
               Valuation Tool
             </Link>
             <Link href="/valuation">
-              <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white">
+              <Button className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white shadow-md">
                 Free Valuation
               </Button>
             </Link>
@@ -106,7 +108,7 @@ export default function Header() {
                 Valuation Tool
               </Link>
               <Link href="/valuation" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white">
+                <Button className="w-full bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white shadow-md">
                   Free Valuation
                 </Button>
               </Link>
