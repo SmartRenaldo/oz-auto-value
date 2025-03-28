@@ -80,7 +80,6 @@ export default function PriceTrendChart() {
   const [selectedVehicleType, setSelectedVehicleType] = useState<
     "sedan" | "suv" | "hatchback" | "ute"
   >("sedan");
-  const [timeRange, setTimeRange] = useState<"12m">("12m");
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("en-AU", {

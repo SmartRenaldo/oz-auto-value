@@ -24,8 +24,8 @@ export function getRecentQuarters(): {
 
   // Start with the most recently completed quarter
   // (previous quarter from current, or Q4 of previous year if in Q1)
-  let prevQuarterIndex = (currentQuarter - 1 + 4) % 4; // Convert to 0-3 range
-  let prevQuarterYear = currentQuarter === 0 ? currentYear - 1 : currentYear;
+  const prevQuarterIndex = (currentQuarter - 1 + 4) % 4; // Convert to 0-3 range
+  const prevQuarterYear = currentQuarter === 0 ? currentYear - 1 : currentYear;
 
   const result = [];
 

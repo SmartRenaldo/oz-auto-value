@@ -6,7 +6,6 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   Radar,
   Legend,
   ResponsiveContainer,
@@ -103,15 +102,6 @@ const brandComparisonData = [
     performance: 75,
   },
 ];
-
-// Metrics descriptions for tooltips
-const metricsDescriptions = {
-  valueRetention: "How well vehicles retain their value over 3 years",
-  reliability: "Based on reported issues and warranty claims",
-  popularity: "Search and inquiry volume relative to market",
-  runningCosts: "Maintenance, fuel, and insurance costs",
-  performance: "Engine output, acceleration, and handling",
-};
 
 // Format data for radar chart
 const formatDataForRadar = (brands: string[]) => {
