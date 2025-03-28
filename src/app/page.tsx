@@ -8,11 +8,22 @@ import ThreeDBackground from "@/components/3d-background";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
+    <div className="flex flex-col min-h-screen relative">
       <ThreeDBackground />
-      <main className="flex-grow">
+      <main className="flex-grow z-10 relative">
         {/* Hero Section */}
         <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
+          {/* Background with overlay */}
+          <div
+            className="absolute inset-0 bg-cover bg-center z-0"
+            style={{
+              backgroundImage: "url(/images/hero.jpg)",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+          </div>
+
           {/* Content */}
           <div className="container relative z-10 px-4 mx-auto text-center">
             <motion.div

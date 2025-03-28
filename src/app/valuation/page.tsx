@@ -31,14 +31,11 @@ export default function ValuationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4">
       <div className="container mx-auto max-w-4xl">
-        <div className="mb-6 invisible">
+        <div className="invisible">
           <Link
             href="/"
-            className="inline-flex items-center text-gray-400 hover:text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors"
-          >
-            <ChevronLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Link>
+            className="inline-flex items-center text-gray-400 hover:text-white px-3 rounded-md hover:bg-gray-800 transition-colors"
+          ></Link>
         </div>
         <div className="mb-6">
           <Link

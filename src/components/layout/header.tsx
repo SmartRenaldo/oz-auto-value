@@ -57,6 +57,12 @@ export default function Header() {
             >
               Valuation Tool
             </Link>
+            <Link
+              href="/market-trends"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              Market Trends
+            </Link>
             <Link href="/valuation">
               <Button className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white shadow-md">
                 Free Valuation
