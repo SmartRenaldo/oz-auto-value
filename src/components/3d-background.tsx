@@ -43,7 +43,7 @@ const ThreeDBackground = () => {
     // Mouse interaction
     let mouseX = 0;
     let mouseY = 0;
-    let mouseRadius = 150;
+    const mouseRadius = 150;
 
     window.addEventListener("mousemove", (e) => {
       mouseX = e.clientX;
