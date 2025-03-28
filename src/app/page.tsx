@@ -12,7 +12,7 @@ export default function Home() {
       <ThreeDBackground />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
           {/* Content */}
           <div className="container relative z-10 px-4 mx-auto text-center">
             <motion.div
