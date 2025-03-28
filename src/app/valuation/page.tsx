@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import CarForm from "@/components/valuation/car-form";
 import ResultCard from "@/components/valuation/result-card";
 import type { CarFormData, ValuationResult } from "@/lib/types";
