@@ -51,17 +51,12 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              href="/valuation"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Valuation Tool
-            </Link>
-            <Link
-              href="/market-trends"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Market Trends
+            <Link href="/market-trends">
+              <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 p-0.5 rounded-md">
+                <Button className="w-full h-full rounded-sm bg-gray-900 hover:bg-gray-800 text-white">
+                  <span className="text-white font-medium">Market Trends</span>
+                </Button>
+              </div>
             </Link>
             <Link href="/valuation">
               <Button className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white shadow-md">

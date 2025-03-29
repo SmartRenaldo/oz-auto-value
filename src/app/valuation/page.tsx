@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import CarForm from "@/components/valuation/car-form";
@@ -12,6 +12,7 @@ import Link from "next/link";
 export default function ValuationPage() {
   const [result, setResult] = useState<ValuationResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
+  const resultRef = useRef<HTMLDivElement>(null);
 
   const handleSubmit = async (data: CarFormData) => {
     // Simulate calculation delay
@@ -21,6 +22,14 @@ export default function ValuationPage() {
       const valuationResult = calculateCarPrice(data);
       setResult(valuationResult);
       setIsCalculating(false);
+
+      // Scroll to result section
+      if (resultRef.current) {
+        resultRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     }, 1500); // 1.5 seconds "calculation" delay for better UX
   };
 
@@ -52,6 +61,7 @@ export default function ValuationPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 backdrop-blur-sm"
+          ref={resultRef}
         >
           <h1 className="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-tight">
             Used Car Valuation Tool

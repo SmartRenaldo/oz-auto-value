@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, TrendingUp } from "lucide-react";
 import ThreeDBackground from "@/components/3d-background";
 
 export default function Home() {
@@ -20,10 +20,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-tight">
-                <span className="font-black">OZ</span>
-                <span className="font-light">AUTO</span>
-                <span className="font-black">VALUE</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+                OzAutoValue
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium mb-4 text-white">
                 Australian Used Car Valuation Expert
@@ -32,17 +30,34 @@ export default function Home() {
                 Get a precise market value estimation for your used car with our
                 intelligent tool, completely free
               </p>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link href="/valuation">
-                  <Button className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white px-8 py-6 rounded-lg text-lg font-medium shadow-lg">
-                    Start Valuation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </motion.div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link href="/market-trends">
+                    <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 p-0.5 rounded-lg inline-block w-full sm:w-auto">
+                      <div className="rounded-md bg-[#050010] hover:bg-[#0a0020] text-white px-8 w-full h-12 flex items-center justify-center">
+                        <span className="text-white font-medium flex items-center text-lg">
+                          Market Trends <TrendingUp className="h-5 w-5 ml-2" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link href="/valuation">
+                    <Button className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white px-8 py-5 rounded-lg text-lg font-medium shadow-lg w-full sm:w-auto h-13">
+                      Start Valuation
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </section>
