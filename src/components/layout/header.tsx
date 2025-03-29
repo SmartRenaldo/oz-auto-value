@@ -101,12 +101,14 @@ export default function Header() {
               >
                 Home
               </Link>
-              <Link
-                href="/valuation"
-                className="text-gray-300 hover:text-white transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Valuation Tool
+              <Link href="/market-trends">
+                <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 p-0.5 rounded-md">
+                  <Button className="w-full h-full rounded-sm bg-gray-900 hover:bg-gray-800 text-white h-10">
+                    <span className="text-white font-medium">
+                      Market Trends
+                    </span>
+                  </Button>
+                </div>
               </Link>
               <Link href="/valuation" onClick={() => setIsMenuOpen(false)}>
                 <Button className="w-full bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 text-white shadow-md">

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUp, ArrowDown, ArrowRight } from "lucide-react";
 import type { ValuationResult } from "@/lib/types";
 
 interface ResultCardProps {
@@ -81,21 +81,33 @@ export default function ResultCard({ result, onReset }: ResultCardProps) {
                   </div>
                   <div
                     className={`
-                    px-2 py-1 rounded-full text-xs font-medium
-                    ${
-                      factor.impact === "positive"
-                        ? "bg-green-900/50 text-green-300 border border-green-700"
-                        : factor.impact === "negative"
-                        ? "bg-red-900/50 text-red-300 border border-red-700"
-                        : "bg-gray-700 text-gray-300 border border-gray-600"
-                    }
-                  `}
+  inline-flex items-center justify-center whitespace-nowrap
+  px-2 py-1 rounded-full text-xs font-medium
+  ${
+    factor.impact === "positive"
+      ? "bg-green-900/50 text-green-300 border border-green-700"
+      : factor.impact === "negative"
+      ? "bg-red-900/50 text-red-300 border border-red-700"
+      : "bg-gray-700 text-gray-300 border border-gray-600"
+  }
+`}
                   >
-                    {factor.impact === "positive"
-                      ? "↑ Positive"
-                      : factor.impact === "negative"
-                      ? "↓ Negative"
-                      : "→ Neutral"}
+                    {factor.impact === "positive" ? (
+                      <span className="flex items-center">
+                        <ArrowUp className="h-3 w-3 mr-1" />
+                        <span>Positive</span>
+                      </span>
+                    ) : factor.impact === "negative" ? (
+                      <span className="flex items-center">
+                        <ArrowDown className="h-3 w-3 mr-1" />
+                        <span>Negative</span>
+                      </span>
+                    ) : (
+                      <span className="flex items-center">
+                        <ArrowRight className="h-3 w-3 mr-1" />
+                        <span>Neutral</span>
+                      </span>
+                    )}
                   </div>
                 </div>
               </CardContent>

@@ -35,6 +35,11 @@ export default function ValuationPage() {
 
   const handleReset = () => {
     setResult(null);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -64,7 +69,7 @@ export default function ValuationPage() {
           ref={resultRef}
         >
           <h1 className="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-tight">
-            Used Car Valuation Tool
+            Used Car Valuation
           </h1>
 
           <AnimatePresence mode="wait">
