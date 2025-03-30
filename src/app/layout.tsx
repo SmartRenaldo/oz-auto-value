@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "OzAutoValue - Australian Used Car Valuation Expert",
   description:
     "Get a free and precise market value estimation for your used car, based on Australian market data",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
