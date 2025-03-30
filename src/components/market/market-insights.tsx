@@ -30,7 +30,7 @@ export default function MarketInsights() {
     // We start with the most recent completed quarter and go backward
     const baseVolume = 730000 - index * 8000;
 
-    // Randomize slightly but maintain a trend
+    // Randomi slightly but maintain a trend
     const randomFactor = 0.98 + Math.random() * 0.04;
     const volume = Math.round(baseVolume * randomFactor);
 
@@ -62,7 +62,7 @@ export default function MarketInsights() {
           12,
           "long"
         )}, with the Tesla Model Y now the most searched EV. ` +
-        "Used EV prices are beginning to stabilize as more inventory enters the market from early adopters upgrading.",
+        "Used EV prices are beginning to stabilise as more inventory enters the market from early adopters upgrading.",
       icon: TrendingUp,
       color: "from-blue-500 to-cyan-500",
     },
@@ -239,7 +239,7 @@ export default function MarketInsights() {
 
           <div className="mt-8 bg-gray-800/50 rounded-lg border border-gray-700 p-5">
             <h3 className="text-lg font-semibold text-white mb-4">
-              cast: {getDynamicDateRange(6, 18)}
+              cast: {getDynamicDateRange(0, 11)}
             </h3>
             <p className="text-gray-400 text-sm mb-4">
               Based on current economic conditions, supply chain improvements,
@@ -251,10 +251,10 @@ export default function MarketInsights() {
                 <div className="bg-pink-500 h-3 w-3 rounded-full mt-1.5 mr-3"></div>
                 <div>
                   <h4 className="text-white font-medium">
-                    Gradual Price Stabilization
+                    Gradual Price Stabilisation
                   </h4>
                   <p className="text-gray-400 text-sm">
-                    We expect average used car prices to stabilize with minor
+                    We expect average used car prices to stabilise with minor
                     increases of 0.3-0.6% per quarter, significantly lower than
                     the 1-2% increases seen in {new Date().getFullYear() - 1}-
                     {new Date().getFullYear()}.
